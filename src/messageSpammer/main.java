@@ -158,6 +158,7 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         btnStart.setEnabled(false);
         btnStop.setEnabled(true);
+        txtMessage.setEnabled(false);
         startBot();
     }//GEN-LAST:event_btnStartActionPerformed
 
@@ -165,6 +166,7 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         btnStart.setEnabled(true);
         btnStop.setEnabled(false);
+        txtMessage.setEnabled(true);
         stopBot();
     }//GEN-LAST:event_btnStopActionPerformed
 
