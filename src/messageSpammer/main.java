@@ -159,15 +159,26 @@ public class main extends javax.swing.JFrame {
         btnStart.setEnabled(false);
         btnStop.setEnabled(true);
         txtMessage.setEnabled(false);
+        spnSecond.setEnabled(false);
+        
+        JOptionPane.showMessageDialog(null, "3 saniye sonra başlayacak", "Spamlama Başlayacak", JOptionPane.INFORMATION_MESSAGE);
+        
+        try {
+            Thread.sleep((long) 3000);
+        } catch (InterruptedException ex) {
+            
+        }
         startBot();
     }//GEN-LAST:event_btnStartActionPerformed
 
     private void btnStopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStopActionPerformed
         // TODO add your handling code here:
+        stopBot();
+        
         btnStart.setEnabled(true);
         btnStop.setEnabled(false);
         txtMessage.setEnabled(true);
-        stopBot();
+        spnSecond.setEnabled(true);
     }//GEN-LAST:event_btnStopActionPerformed
 
     private boolean isStart = true;
